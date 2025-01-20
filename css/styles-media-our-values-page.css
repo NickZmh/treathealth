@@ -1,0 +1,88 @@
+@media only screen and (max-width: 1399.98px) {
+  section.values-carousel .wrapper-item h4 {
+    font-size: 45px;
+    line-height: 50px; } }
+
+@media only screen and (max-width: 1199.98px) {
+  section.values-carousel .wrapper-item {
+    min-height: 300px; }
+    section.values-carousel .wrapper-item h4 {
+      font-size: 40px;
+      line-height: 50px; } }
+
+@media only screen and (max-width: 991px) {
+  section.founded h3 {
+    font-size: 46px;
+    line-height: 55px; }
+  section.founded p {
+    font-size: 16px;
+    line-height: 22px; }
+  section.rebuilding .wrapper-img {
+    margin-bottom: 30px; }
+  section.our-values h3.title {
+    font-size: 28px; }
+  section.values-carousel .wrapper-item {
+    min-height: 260px;
+    margin: 0 10px; }
+    section.values-carousel .wrapper-item h4 {
+      font-size: 35px;
+      line-height: 40px; }
+  section.latest .latest-in {
+    flex-direction: column; }
+    section.latest .latest-in .content {
+      text-align: center;
+      margin-bottom: 40px; }
+      section.latest .latest-in .content h3 {
+        margin-bottom: 25px; }
+      section.latest .latest-in .content .button-wrapper {
+        justify-content: center; }
+  section.latest .wrapper-for-line .line-grey,
+  section.latest .wrapper-for-top-line .line-grey {
+    display: none; }
+  section.latest .line-grey-phantom {
+    display: block; } }
+
+@media only screen and (max-width: 768px) {
+  section.founded {
+    padding: 35px 0 40px 0; }
+    section.founded h3 {
+      font-size: 34px;
+      line-height: 40px; }
+  section.our-values h2 {
+    font-size: 44px;
+    line-height: 53px;
+    margin-bottom: 20px; }
+  section.our-values h3.title {
+    font-size: 24px;
+    line-height: 27px;
+    margin-bottom: 40px; }
+  section.our-values .wrapper-tile-values {
+    width: 400px; }
+  section.values-carousel h2 {
+    font-size: 44px;
+    line-height: 50px; } }
+
+@media only screen and (max-width: 600px) {
+  section.values-carousel .wrapper-item {
+    min-height: 240px; } }
+
+@media only screen and (max-width: 480px) {
+  section.rebuilding .rebuilding-content {
+    padding: 20px 30px 20px 30px; }
+  section.our-values h3.title {
+    font-size: 22px;
+    line-height: 26px; }
+  section.latest .latest-in .list-spite ul li {
+    margin: 0 10px; } }
+
+@media only screen and (max-width: 400px) {
+  section.latest .latest-in .list-spite ul li {
+    margin: 0 5px; } }
+
+@media only screen and (min-width: 992px) {
+  section.rebuilding .wrapper-img img {
+    height: 100%; }
+  section.latest .latest-in {
+    padding: 0 35px; }
+    section.latest .latest-in .list-spite ul li:last-of-type {
+      margin-right: 0; } }

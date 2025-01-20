@@ -1,0 +1,234 @@
+/////*==========  Desktop First Method  ==========*/
+////
+////
+//
+//$black-color: #2b2b2d
+//$lettuce-color: rgb(0,154,143)
+//
+//@media only screen and (max-width: 1499.98px)
+
+
+@media only screen and (max-width: 1399.98px)
+  section.contact-us
+    position: relative
+    .content-center
+      position: relative
+      z-index: 20
+
+/////* Large Devices, Wide Screens */
+@media only screen and (max-width: 1199.98px)
+  section.founded h3
+    font-size: 41px
+    line-height: 51px
+  section.partnerships .content
+    padding: 40px
+    h2
+      font-size: 45px
+      line-height: 45px
+    h3,p
+      margin-bottom: 20px
+  section.more-info .tile-body
+    border-radius: inherit
+
+
+@media only screen and (max-width: 1099.98px)
+  section.more-info
+    .tile-body
+      padding: 70px 0 0 70px
+    .content-in
+      width: 410px
+      padding: 70px 50px 50px 50px
+///* Medium Devices, Desktops */
+@media only screen and (max-width: 991px)
+  section.founded h3
+    font-size: 34px
+    line-height: 40px
+  section.partnerships .content
+    margin-bottom: 30px
+    height: inherit
+    min-height: inherit
+  section.more-info
+    .tile-body
+      padding: 70px 0 0 0
+      flex-direction: column-reverse
+      .wrapper-content-in
+        display: flex
+        flex-direction: row
+        justify-content: flex-end
+        margin-bottom: 30px
+        .content-in
+          width: 600px
+          max-width: 600px
+          padding: 70px 50px 70px 50px
+      .img-wrapper
+        padding: 0 20px
+        display: block
+        margin: 0 auto
+        img
+          max-width: 100%
+          height: auto
+  section.latest .latest-in
+    flex-direction: column
+    .content
+      text-align: center
+      margin-bottom: 40px
+      h3
+        margin-bottom: 25px
+      .button-wrapper
+        justify-content: center
+
+
+/////* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+  .line-grey-phantom
+    display: block
+  section.founded p
+    font-size: 16px
+  section.partnerships .content
+    h2
+      font-size: 40px
+      line-height: 40px
+      margin-bottom: 25px
+    h3
+      font-size: 25px
+      line-height: 25px
+  section.contact-us .content-center .button-wrapper
+    flex-direction: column
+    align-items: center
+    a.button:first-of-type
+      margin-bottom: 20px
+  section.more-info .tile-body .wrapper-content-in .content-in
+    width: 500px
+    max-width: 500px
+  section.latest .wrapper-for-line .line-grey
+    display: none
+/////*Disable Animation on Mobile Devices*/
+/////*CSS transitions*/
+////.animated
+////    -o-transition-property: none !important
+////    -moz-transition-property: none !important
+////    -ms-transition-property: none !important
+////    -webkit-transition-property: none !important
+////    transition-property: none !important
+////    /*CSS transforms*/
+////    -o-transform: none !important
+////    -moz-transform: none !important
+////    -ms-transform: none !important
+////    -webkit-transform: none !important
+////    transform: none !important
+////    /*CSS animations*/
+////    -webkit-animation: none !important
+////    -moz-animation: none !important
+////    -o-animation: none !important
+////    -ms-animation: none !important
+////    animation: none !important
+////
+////
+@media only screen and (max-width : 600px)
+  section.more-info
+    .wrapper-content-in
+      .content-in
+        a.button
+          margin-left: 0
+@media only screen and (max-width : 500px)
+  section.more-info .tile-body .wrapper-content-in .content-in
+    border-top-left-radius: inherit
+    border-bottom-left-radius: inherit
+/////* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+  section.partnerships
+    .content
+      padding: 25px
+      h2
+        font-size: 35px
+        line-height: 35px
+      h3
+        font-size: 20px
+        line-height: 22px
+  section.contact-us .content-center .button-wrapper a.button
+    width: 100%
+  section.more-info .tile-body .wrapper-content-in .content-in
+    padding: 50px 25px
+  section.latest .latest-in .list-spite ul li
+    margin: 0 10px
+
+@media only screen and (max-width : 400px)
+  section.latest .latest-in .list-spite ul li
+    margin: 0 5px
+//
+//
+///* Custom, iPhone Retina */
+@media only screen and (min-width: 320px)
+  section.contact-us .content-center
+    h2
+      font-size: 32px
+      line-height: 32px
+      margin-bottom: 15px
+    p
+      font-size: 16px
+      margin-bottom: 25px
+      line-height: 24px
+
+///* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px)
+  section.contact-us .content-center
+    h2
+      font-size: 40px
+      line-height: 40px
+      margin-bottom: 20px
+    p
+      font-size: 18px
+    .button-wrapper
+      a.button
+        width: 250px
+
+/////* Small Devices, Tablets */
+//@media only screen and (min-width : 768px)
+//
+//
+///* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+  section.contact-us
+    .content-center
+      h2
+        font-size: 48px
+        line-height: 52px
+        margin-bottom: 35px
+      p
+        margin-bottom: 35px
+  section.partnerships
+    .img-wrapper
+      &::before
+        content: ''
+        position: absolute
+        background-image: url(../img/partnerships-photo.jpg)
+        background-repeat: no-repeat
+        width: 100%
+        height: 500px
+        object-fit: cover
+        -moz-box-shadow: 0px 11px 49.6px 12.4px rgba(0, 0, 0, 0.06)
+        -webkit-box-shadow: 0px 11px 49.6px 12.4px rgba(0, 0, 0, 0.06)
+        box-shadow: 0px 11px 49.6px 12.4px rgba(0, 0, 0, 0.06)
+      img
+        display: none
+  section.latest .latest-in
+    padding: 0 35px
+    .list-spite ul li:last-of-type
+      margin-right: 0
+
+///////* Large Devices, Wide Screens */
+//@media only screen and (min-width : 1200px)
+//
+//
+//
+//@media only screen and (min-width : 1400px)
+//
+//
+//@media (min-width : 1400px) and (max-width : 1550px)
+//
+//
+//@media only screen and (min-width : 1500px)
+//
+//
+//@media only screen and (min-width : 1600px)
+//

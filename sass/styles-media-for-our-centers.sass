@@ -1,0 +1,205 @@
+/////*==========  Desktop First Method  ==========*/
+////
+////
+//
+
+//@media only screen and (max-width: 1499.98px)
+//
+//
+@media only screen and (max-width: 1399.98px)
+  section.founded h3
+    font-size: 41px
+    line-height: 51px
+  section.centers-tailored h2
+    font-size: 41px
+    line-height: 51px
+  section.holistic-care .content
+    padding: 40px 20px 40px 35px
+/////* Large Devices, Wide Screens */
+@media only screen and (max-width: 1199.98px)
+  section.centers-tailored
+    .img-wrapper
+      img
+        height: 300px
+        min-height: 300px
+    .img-grid
+      .img-wrapper
+        img
+          height: 140px
+          min-height: 140px
+/////* Medium Devices, Desktops */
+@media only screen and (max-width: 991px)
+  section.founded h3
+    font-size: 34px
+    line-height: 40px
+  section.holistic-care
+    .content
+      height: inherit
+      min-height: inherit
+      margin-bottom: 30px
+  section.centers-tailored
+    .img-wrapper img
+      height: inherit
+      min-height: inherit
+    .img-wrapper.large-main img
+      margin-bottom: 25px
+    .img-grid .img-wrapper img
+      min-height: 200px
+      height: 200px
+  section.latest
+    .latest-in
+      flex-direction: column
+      .content
+        text-align: center
+        margin-bottom: 40px
+        h3
+          margin-bottom: 25px
+        .button-wrapper
+          justify-content: center
+    .wrapper-for-line,
+    .wrapper-for-top-line
+      .line-grey
+        display: none
+    .line-grey-phantom
+      display: block
+
+/////* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+  section.founded p
+    font-size: 16px
+  section.why-our-center h3
+    font-size: 41px
+//
+/////*Disable Animation on Mobile Devices*/
+/////*CSS transitions*/
+////.animated
+////    -o-transition-property: none !important
+////    -moz-transition-property: none !important
+////    -ms-transition-property: none !important
+////    -webkit-transition-property: none !important
+////    transition-property: none !important
+////    /*CSS transforms*/
+////    -o-transform: none !important
+////    -moz-transform: none !important
+////    -ms-transform: none !important
+////    -webkit-transform: none !important
+////    transform: none !important
+////    /*CSS animations*/
+////    -webkit-animation: none !important
+////    -moz-animation: none !important
+////    -o-animation: none !important
+////    -ms-animation: none !important
+////    animation: none !important
+////
+////
+@media only screen and (max-width : 575.98px)
+  section.centers-tailored
+    .img-wrapper
+      img
+        -moz-box-shadow: none
+        -webkit-box-shadow: none
+        box-shadow: none
+    .img-wrapper.large-main img
+      margin-bottom: 14px
+    .img-grid .img-wrapper
+      img
+        min-height: inherit
+        height: inherit
+/////* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+  section.centers-tailored
+    h2
+      font-size: 31px
+      line-height: 35px
+    p
+      font-size: 16px
+      line-height: 18px
+  section.holistic-care
+    .content
+      padding: 40px 20px
+      h2
+        font-size: 40px
+        line-height: 40px
+      h3
+        font-size: 20px
+        line-height: 21px
+  section.centers-tailored
+    padding: 40px 0 0 0
+  section.why-our-center
+    padding: 20px 0 0 0
+    h3
+      font-size: 33px
+      line-height: 38px
+  section.latest .latest-in .list-spite ul li
+    margin: 0 10px
+
+@media only screen and (max-width : 400px)
+  section.latest .latest-in .list-spite ul li
+    margin: 0 5px
+//
+//
+///* Custom, iPhone Retina */
+//@media only screen and (min-width: 320px)
+//
+///* Extra Small Devices, Phones */
+//@media only screen and (min-width: 480px)
+//
+//
+/////* Small Devices, Tablets */
+//@media only screen and (min-width : 768px)
+//
+//
+///* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+  section.holistic-care
+    .img-wrapper
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        background-image: url(../img/bg-for-tile-holistic-care.jpg)
+        background-repeat: no-repeat
+        width: 100%
+        height: 500px
+        object-fit: cover
+        -moz-box-shadow: 0px 11px 49.6px 12.4px rgba(0, 0, 0, 0.06)
+        -webkit-box-shadow: 0px 11px 49.6px 12.4px rgba(0, 0, 0, 0.06)
+        box-shadow: 0px 11px 49.6px 12.4px rgba(0, 0, 0, 0.06)
+      img
+        display: none
+  section.why-our-center
+    .img-wrapper
+      height: 380px
+      min-height: 380px
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        background-image: url(../img/bg-for-tile-why-our-center.jpg)
+        background-repeat: no-repeat
+        width: 100%
+        height: 380px
+        min-height: 380px
+        object-fit: cover
+        -moz-box-shadow: 0px 11px 49.6px 12.4px rgba(0, 0, 0, 0.06)
+        -webkit-box-shadow: 0px 11px 49.6px 12.4px rgba(0, 0, 0, 0.06)
+        box-shadow: 0px 11px 49.6px 12.4px rgba(0, 0, 0, 0.06)
+  section.latest .latest-in
+    .list-spite ul li:last-of-type
+      margin-right: 0
+
+///////* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+  section.latest .latest-in
+    padding: 0 35px
+//@media only screen and (min-width : 1400px)
+//
+//
+//@media (min-width : 1400px) and (max-width : 1550px)
+//
+//
+//@media only screen and (min-width : 1500px)
+//
+//
+//@media only screen and (min-width : 1600px)
+//

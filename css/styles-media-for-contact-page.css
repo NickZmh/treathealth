@@ -1,0 +1,124 @@
+@media only screen and (max-width: 1399.98px) {
+  section.form .to-top .tile-body {
+    padding: 45px 50px 36px 50px; } }
+
+@media only screen and (max-width: 1199.98px) {
+  section.form .to-top .tile-body form.main-form .two-child {
+    flex-direction: column; }
+    section.form .to-top .tile-body form.main-form .two-child .item {
+      width: 100%; }
+      section.form .to-top .tile-body form.main-form .two-child .item:first-of-type {
+        margin-bottom: 20px; }
+  section.form .to-top .right-block {
+    display: block; }
+    section.form .to-top .right-block .img-wrapper img {
+      width: 100%;
+      height: 608px;
+      min-height: 608px; } }
+
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  section.numbers .text:first-of-type {
+    padding-left: 0 !important; }
+  section.numbers .text:last-of-type {
+    padding-right: 0 !important; } }
+
+@media only screen and (max-width: 991px) {
+  section.form .to-top .tile-body {
+    margin-bottom: 30px; }
+  section.form .to-top .right-block .img-wrapper img {
+    width: 100%;
+    height: inherit;
+    min-height: inherit; }
+  section.numbers .text h3 {
+    margin-bottom: 10px; }
+  section.numbers .text h4 {
+    font-size: 28px;
+    line-height: 31px;
+    margin-bottom: 8px; }
+  section.numbers .text p {
+    margin-bottom: 0; }
+  section.numbers .second-line h4 {
+    font-size: 28px;
+    line-height: 31px; }
+  section.numbers .text h3,
+  section.numbers .text p {
+    font-size: 35px;
+    line-height: 40px; } }
+
+@media only screen and (max-width: 767.98px) {
+  section.banner {
+    padding: 70px 0 200px 0; }
+    section.banner h1 {
+      font-size: 41px;
+      line-height: 50px; }
+  section.chat-online .chat-description .work-schedule {
+    flex-direction: column;
+    align-items: center; }
+    section.chat-online .chat-description .work-schedule p {
+      margin-bottom: 15px; }
+  section.numbers .text {
+    margin-bottom: 40px; }
+  section.numbers .second-line {
+    padding-top: 0; } }
+
+@media only screen and (max-width: 600px) {
+  section.chat-online .chat-title h2 {
+    font-size: 45px;
+    line-height: 45px; } }
+
+@media only screen and (max-width: 480px) {
+  section.banner h1 {
+    font-size: 35px;
+    line-height: 38px; }
+  section.form .to-top .tile-body {
+    padding: 30px 25px 30px 25px; }
+    section.form .to-top .tile-body h3 {
+      margin-bottom: 20px; }
+    section.form .to-top .tile-body form.main-form input,
+    section.form .to-top .tile-body form.main-form textarea {
+      text-indent: 15px; }
+    section.form .to-top .tile-body form.main-form textarea {
+      height: 100px; }
+    section.form .to-top .tile-body form.main-form .button-wrapper button.button {
+      width: 100%; }
+  section.chat-online {
+    padding: 50px 0 50px 0; }
+    section.chat-online .chat-title h2 {
+      font-size: 40px;
+      line-height: 40px; }
+    section.chat-online .chat-title p {
+      font-size: 16px;
+      line-height: 18px; }
+    section.chat-online .chat-description {
+      margin-bottom: 20px; }
+      section.chat-online .chat-description h3 {
+        margin-bottom: 15px; }
+      section.chat-online .chat-description .work-schedule {
+        display: flex;
+        flex-direction: column; }
+        section.chat-online .chat-description .work-schedule p {
+          padding: 0;
+          text-align: center; }
+          section.chat-online .chat-description .work-schedule p span {
+            display: block;
+            margin-bottom: 5px; }
+  section.numbers {
+    padding: 50px 0 70px 0; }
+    section.numbers .text h4 {
+      font-size: 24px;
+      line-height: 28px; }
+    section.numbers .second-line h3 {
+      font-size: 40px;
+      line-height: 45px; }
+    section.numbers .second-line h4 {
+      font-size: 18px;
+      line-height: 20px; }
+  section.numbers .text h3,
+  section.numbers .text p {
+    font-size: 30px;
+    line-height: 34px; } }
+
+@media (min-width: 1400px) and (max-width: 1550px) {
+  section.form .to-top .tile-body {
+    min-height: 515px;
+    height: 515px; } }

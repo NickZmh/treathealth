@@ -1,0 +1,239 @@
+/////*==========  Desktop First Method  ==========*/
+////
+//Generals colors
+$black-color: #2b2b2d
+$orange: rgb(255, 153, 102)
+$orange-dark: rgb(255, 134, 90)
+$lettuce-color: rgb(0,154,143)
+//END Generals colors
+
+//Generals fonts
+$averta-light: 'Averta Light', sans-serif
+$averta-bold: 'Averta Bold', sans-serif
+$averta-regular: 'Averta Regular', sans-serif
+$averta-semibold: 'Averta Semibold', sans-serif
+//END Generals fonts
+
+
+//@media only screen and (max-width: 1499.98px)
+
+
+@media only screen and (max-width: 1399.98px)
+  header .header-wrapper .right-side .call-us
+    display: none
+  section.main-content
+    h1
+      font-size: 60px
+      line-height: 60px
+
+/////* Large Devices, Wide Screens */
+@media only screen and (max-width: 1199.98px)
+  footer .wrapper-footer-content
+    font-size: 16px
+    .message-up
+      margin-bottom: 10px
+
+
+//* Medium Devices, Desktops */
+@media only screen and (max-width: 991px)
+  .right-side .call-us-banner
+    display: none
+  section.main-content
+    padding: 50px 0 50px 0
+    h1
+      text-align: center
+      font-size: 56px
+      line-height: 56px
+      margin-bottom: 0
+    form h3
+      text-align: center
+    form.sing-up
+      display: none
+      .form-group
+        flex-direction: column
+        input
+          width: 100%
+          margin-bottom: 18px
+        button.button
+          font-family: $averta-regular
+          font-weight: 400
+          font-size: 16px
+          height: 42px
+          width: 100%
+          background-color: $lettuce-color
+          color: #fff
+          &:hover
+            background-color: transparent
+            color: $lettuce-color
+    form.login,
+    form.sing-up
+      padding: 50px 0 30px 0
+      a.forgot-pass
+        display: block
+        text-align: center
+    .sing-up-now
+      a.log-in
+        margin-bottom: 18px
+      a.forgot-pass
+        font-family: $averta-light
+        font-weight: 300
+        font-size: 16px
+        line-height: 18px
+        color: $lettuce-color
+        text-decoration: underline
+        transition: color .2s ease-out,background-color .2s ease-out,border .2s ease-out
+        &:hover
+          text-decoration: none
+          transition: color .2s ease-out,background-color .2s ease-out,border .2s ease-out
+    .img-wrapper
+      display: none
+    .main-wrapper-form
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    .sing-up-now
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      border-top: 1px solid rgb(223, 223, 223)
+      //border-bottom: 1px solid rgb(223, 223, 223)
+      position: relative
+      padding: 30px 0 40px 0
+      width: 100%
+      max-width: 365px
+      h3
+        font-family: $averta-bold
+        font-weight: 700
+        font-size: 23px
+        line-height: 26px
+        color: $black-color
+        margin-bottom: 20px
+        text-align: center
+      a.button
+        font-family: $averta-regular
+        font-weight: 400
+        height: 41px
+        font-size: 16px
+        width: 80%
+  footer
+    padding: 0 0 40px
+    .line-border
+      margin-bottom: 40px
+    .wrapper-footer-content
+      flex-direction: column
+      align-items: center
+
+/////* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+  section.main-content h1
+    font-size: 43px
+    line-height: 43px
+
+/////*Disable Animation on Mobile Devices*/
+/////*CSS transitions*/
+////.animated
+////    -o-transition-property: none !important
+////    -moz-transition-property: none !important
+////    -ms-transition-property: none !important
+////    -webkit-transition-property: none !important
+////    transition-property: none !important
+////    /*CSS transforms*/
+////    -o-transform: none !important
+////    -moz-transform: none !important
+////    -ms-transform: none !important
+////    -webkit-transform: none !important
+////    transform: none !important
+////    /*CSS animations*/
+////    -webkit-animation: none !important
+////    -moz-animation: none !important
+////    -o-animation: none !important
+////    -ms-animation: none !important
+////    animation: none !important
+////
+////
+//@media only screen and (max-width : 600px)
+
+/////* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+  section.main-content
+    padding: 30px 0 0 0
+    form.login
+      padding: 30px 0
+  section.main-content .sing-up-now
+    border-bottom: none
+  footer .wrapper-footer-content
+    ul.foot-nav li::before
+      content: ''
+      position: absolute
+      top: 6px
+      left: calc(-15px - 4px)
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      background-color: rgb(212, 212, 212)
+    .message-up,
+    ul.foot-nav
+      flex-direction: column
+    .message-up
+      margin-bottom: 20px
+      a
+        margin-bottom: 5px
+      p
+        margin-left: 20px
+    ul.foot-nav
+      li
+        margin-bottom: 5px
+
+
+//@media only screen and (max-width : 400px)
+
+//
+//
+///* Custom, iPhone Retina */
+//@media only screen and (min-width: 320px)
+//
+///* Extra Small Devices, Phones */
+//@media only screen and (min-width: 480px)
+
+/////* Small Devices, Tablets */
+//@media only screen and (min-width : 768px)
+//
+//
+///* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+  .sing-up-now
+    display: none
+  footer .wrapper-footer-content ul.foot-nav li:last-of-type
+    margin-right: 0
+
+
+///////* Large Devices, Wide Screens */
+//@media only screen and (min-width : 1200px)
+//
+@media only screen and (min-width : 1400px)
+  //Main Padding
+  .p-r-0
+    padding-right: 0!important
+  .p-l-0
+    padding-left: 0!important
+  //End Main Padding
+  section.main-content h1
+    margin-left: 10px
+  footer .line-border::before
+    left: -55px
+
+  footer
+    .line-border
+      margin-left: -40px
+    .wrapper-footer-content ul.foot-nav
+      margin-right: 40px
+//@media (min-width : 1400px) and (max-width : 1550px)
+//
+//
+//@media only screen and (min-width : 1500px)
+
+
+//@media only screen and (min-width : 1600px)
+//

@@ -1,0 +1,863 @@
+html.js .loader {
+  background: none repeat scroll 0 0 #ffffff;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999; }
+  html.js .loader .loader_inner {
+    background-image: url("../img/preloader.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #fff;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    left: 50%;
+    top: 50%;
+    position: absolute; }
+
+body {
+  font-family: "Averta Bold", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  margin: 0; }
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: red; }
+
+body input:required:valid,
+body textarea:required:valid {
+  color: green; }
+
+h1, h2, h3, h4, h5 {
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+p {
+  margin: 0; }
+
+.button {
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  transition: color .2s ease-out,background-color .2s ease-out,border .2s ease-out; }
+  .button:hover {
+    transition: color .2s ease-out,background-color .2s ease-out,border .2s ease-out; }
+
+.white-button {
+  font-family: "Averta Light", sans-serif;
+  font-weight: 400;
+  background-color: #fff;
+  border: 1px solid #fff; }
+  .white-button:hover {
+    background-color: transparent;
+    color: #fff; }
+
+.transp-lettuce-button {
+  border: 1px solid #009a8f;
+  background-color: #fff;
+  color: #009a8f; }
+  .transp-lettuce-button:hover {
+    background-color: transparent;
+    color: #009a8f; }
+
+.lettuce-transp-button {
+  border: 1px solid #009a8f;
+  background-color: #009a8f;
+  color: #fff; }
+  .lettuce-transp-button:hover {
+    background-color: transparent;
+    color: #009a8f; }
+
+.lettuce-transp-bg {
+  border: 1px solid #009a8f;
+  background-color: transparent;
+  color: #009a8f; }
+  .lettuce-transp-bg:hover {
+    background-color: #009a8f;
+    color: #fff; }
+
+.orange-button {
+  font-family: "Averta Light", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  background-color: #f5855c;
+  border: 1px solid #f5855c; }
+  .orange-button:hover {
+    background-color: transparent;
+    color: #f5855c; }
+
+button,
+input:focus {
+  outline: none; }
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.line {
+  position: relative; }
+  .line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #ff9966; }
+  .line.change-color::before {
+    background-color: #009a8f; }
+
+.message {
+  display: none;
+  padding: 12px 0 12px 0;
+  background-color: #ffefe2;
+  transition: transform .5s ease-out,opacity .5s ease-out; }
+  .message.change-background {
+    transition: transform 1s ease-out,opacity 1s ease-out;
+    background-color: #fafafa; }
+  .message.trans p {
+    transform: translateY(0); }
+  .message p {
+    text-align: center;
+    font-family: "Averta Light", sans-serif;
+    color: #1a1a1a;
+    transform: translateY(-100%);
+    transition: transform .7s ease-out,opacity .7s ease-out; }
+
+header {
+  background-color: #fff;
+  padding: 20px 0 20px 0;
+  font-weight: bold; }
+  header .header-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center; }
+    header .header-wrapper .logo {
+      display: flex; }
+      header .header-wrapper .logo img {
+        max-width: 100%; }
+    header .header-wrapper .nav-menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      header .header-wrapper .nav-menu ul {
+        display: flex;
+        flex-direction: row; }
+        header .header-wrapper .nav-menu ul li a {
+          font-family: "Averta Regular", sans-serif;
+          font-size: 20px;
+          line-height: 20px;
+          font-weight: 400;
+          color: #2b2b2d;
+          font-stretch: normal; }
+      header .header-wrapper .nav-menu ul.nav li:hover a {
+        color: #009a8f; }
+      header .header-wrapper .nav-menu ul.nav li ul.dropdown {
+        padding: 15px 0 15px 0; }
+        header .header-wrapper .nav-menu ul.nav li ul.dropdown li {
+          padding: 15px 30px; }
+          header .header-wrapper .nav-menu ul.nav li ul.dropdown li a {
+            display: flex;
+            flex-direction: column; }
+            header .header-wrapper .nav-menu ul.nav li ul.dropdown li a:hover span.title,
+            header .header-wrapper .nav-menu ul.nav li ul.dropdown li a:hover span.description {
+              color: #009a8f;
+              transition: color .2s ease-out,background-color .2s ease-out,border .2s ease-out; }
+            header .header-wrapper .nav-menu ul.nav li ul.dropdown li a span {
+              display: flex; }
+            header .header-wrapper .nav-menu ul.nav li ul.dropdown li a span.title {
+              font-family: "Averta Semibold", sans-serif;
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 18px;
+              color: #2b2b2d;
+              margin-bottom: 8px; }
+            header .header-wrapper .nav-menu ul.nav li ul.dropdown li a span.description {
+              font-family: "Averta Regular", sans-serif;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 16px;
+              color: #2b2b2d; }
+      header .header-wrapper .nav-menu .lang-badge {
+        display: flex;
+        position: relative;
+        padding: 0;
+        background-color: #f5855c;
+        border-radius: 10px;
+        margin-left: 20px; }
+        header .header-wrapper .nav-menu .lang-badge::before {
+          position: absolute;
+          top: 10px;
+          left: 14px;
+          content: '';
+          background-image: url(../img/blob.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 20px;
+          width: 20px; }
+        header .header-wrapper .nav-menu .lang-badge span {
+          display: flex;
+          color: #fff;
+          font-size: 20px;
+          font-weight: 700;
+          height: 41px;
+          width: 78px;
+          padding: 0 0 .5px 26px; }
+
+.right-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .right-side .login a {
+    font-size: 16px;
+    width: 98px;
+    height: 45px;
+    padding-bottom: 3px;
+    font-weight: bold; }
+  .right-side .call-us {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: #2b2b2d;
+    margin-left: 20px; }
+    .right-side .call-us .button {
+      display: flex;
+      position: relative;
+      font-family: 'Avenir Light', sans-serif;
+      font-size: 18px;
+      width: 260px;
+      height: 45px;
+      font-weight: 400; }
+
+section.main {
+  padding: 95px 0 70px 0;
+  background-color: #009a8f;
+  position: relative; }
+  section.main::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 160px;
+    background-color: #fff;
+    z-index: 15; }
+  section.main .presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
+    section.main .presentation .wrapper-over {
+      margin-top: 35px;
+      position: relative; }
+      section.main .presentation .wrapper-over .over h1 {
+        font-family: "Averta Bold", sans-serif;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 60px;
+        color: #fff;
+        margin-bottom: 15px; }
+      section.main .presentation .wrapper-over .over p {
+        font-family: "Averta Regular", sans-serif;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 300;
+        color: #fff; }
+    section.main .presentation .wrapper-button {
+      display: flex;
+      margin-top: 30px; }
+      section.main .presentation .wrapper-button a.white-button {
+        font-size: 22px;
+        line-height: 26px;
+        width: 258px;
+        color: #009a8f;
+        height: 58px;
+        position: relative;
+        z-index: 20000; }
+        section.main .presentation .wrapper-button a.white-button:hover {
+          color: #fff; }
+  section.main .img-wrapper {
+    position: relative;
+    z-index: 35; }
+    section.main .img-wrapper::before {
+      content: '#treat';
+      position: absolute;
+      font-family: "Averta Bold", sans-serif;
+      font-size: 170px;
+      line-height: 170px;
+      left: -490px;
+      bottom: 25px;
+      color: #fff6ee;
+      z-index: 50; }
+    section.main .img-wrapper img {
+      max-width: 100%;
+      margin-bottom: 35px;
+      -moz-box-shadow: 0 11px 49.6px 12.4px rgba(0, 0, 0, 0.09);
+      -webkit-box-shadow: 0 11px 49.6px 12.4px rgba(0, 0, 0, 0.09);
+      box-shadow: 0 11px 49.6px 12.4px rgba(0, 0, 0, 0.09); }
+
+section.consultation {
+  position: relative;
+  margin-top: 90px; }
+  section.consultation .wrapper-for-tile .tile {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: #eff4f6; }
+    section.consultation .wrapper-for-tile .tile .content-left {
+      position: relative;
+      width: 47%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 100%;
+      padding-right: 70px; }
+      section.consultation .wrapper-for-tile .tile .content-left .wrapper-image {
+        position: absolute;
+        top: -89px;
+        left: -80px;
+        width: 450px;
+        height: 455px; }
+        section.consultation .wrapper-for-tile .tile .content-left .wrapper-image img {
+          object-fit: contain; }
+      section.consultation .wrapper-for-tile .tile .content-left p {
+        position: relative;
+        font-family: "Averta Light", sans-serif;
+        font-size: 14px;
+        line-height: 16px;
+        color: #2b2b2d;
+        padding-left: 120px;
+        margin-bottom: 60px; }
+        section.consultation .wrapper-for-tile .tile .content-left p::before {
+          content: '';
+          position: absolute;
+          top: -5px;
+          left: 60px;
+          background-image: url(../img/contacts-tile.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 38px;
+          height: 48px; }
+    section.consultation .wrapper-for-tile .tile .content-right {
+      padding: 35px 45px 35px 0;
+      width: 53%; }
+      section.consultation .wrapper-for-tile .tile .content-right h2 {
+        font-family: "Averta Bold", sans-serif;
+        color: #2b2b2d;
+        font-size: 44px;
+        line-height: 50px;
+        margin-bottom: 18px; }
+        section.consultation .wrapper-for-tile .tile .content-right h2 span {
+          color: #009a8f; }
+      section.consultation .wrapper-for-tile .tile .content-right ul.list {
+        margin-right: 40px;
+        margin-bottom: 20px; }
+        section.consultation .wrapper-for-tile .tile .content-right ul.list li {
+          position: relative;
+          font-family: "Averta Light", sans-serif;
+          font-size: 16px;
+          line-height: 18px;
+          padding: 14px 15px 13px 35px;
+          color: #2b2b2d;
+          border-top: 1px solid #bfc3c5; }
+          section.consultation .wrapper-for-tile .tile .content-right ul.list li:before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 5px;
+            background-image: url(../img/cheked.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 23px;
+            height: 23px; }
+      section.consultation .wrapper-for-tile .tile .content-right .button-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start; }
+      section.consultation .wrapper-for-tile .tile .content-right a.lettuce-transp-button {
+        font-family: "Averta Bold", sans-serif;
+        position: relative;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 20px;
+        padding: 15px 57px 17px 24px; }
+        section.consultation .wrapper-for-tile .tile .content-right a.lettuce-transp-button::after {
+          content: '';
+          position: absolute;
+          top: 16px;
+          right: 23px;
+          background-image: url(../img/arrow-right.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 19px;
+          width: 20px; }
+
+section.introduction {
+  padding-top: 90px;
+  padding-bottom: 100px; }
+  section.introduction .title h2 {
+    font-family: "Averta Bold", sans-serif;
+    color: #2b2b2d; }
+    section.introduction .title h2 span {
+      color: #009a8f; }
+  section.introduction .description {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    section.introduction .description p {
+      font-family: "Averta Light", sans-serif; }
+
+section.contact-us {
+  padding: 0 0 0 0; }
+  section.contact-us .content-center {
+    text-align: center; }
+    section.contact-us .content-center h2 {
+      font-family: "Averta Bold", sans-serif;
+      color: #2b2b2d; }
+      section.contact-us .content-center h2 span {
+        color: #009a8f; }
+    section.contact-us .content-center p {
+      font-family: "Averta Light", sans-serif;
+      opacity: .8;
+      font-weight: 300;
+      line-height: 24px;
+      color: #2b2b2d; }
+
+section.tiles-contacts {
+  padding: 85px 0 0 0; }
+  section.tiles-contacts .medicaid-wrapper {
+    position: relative; }
+    section.tiles-contacts .medicaid-wrapper .tile-medicaid {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 70px;
+      padding-bottom: 33px;
+      background-color: #f5855c; }
+      section.tiles-contacts .medicaid-wrapper .tile-medicaid::before {
+        content: '';
+        position: absolute;
+        left: calc(50% - 22px);
+        background-image: url(../img/heart-for-medicaid.png);
+        background-repeat: no-repeat;
+        background-size: contain; }
+      section.tiles-contacts .medicaid-wrapper .tile-medicaid h3 {
+        color: #fff;
+        font-family: "Averta Bold", sans-serif;
+        font-weight: 400;
+        text-align: center;
+        max-width: 450px; }
+      section.tiles-contacts .medicaid-wrapper .tile-medicaid .button-wrapper {
+        display: flex; }
+        section.tiles-contacts .medicaid-wrapper .tile-medicaid .button-wrapper a.white-button {
+          font-family: "Averta Bold", sans-serif;
+          font-size: 18px;
+          line-height: 21px;
+          width: 218px;
+          height: 50px;
+          color: #f5855c; }
+          section.tiles-contacts .medicaid-wrapper .tile-medicaid .button-wrapper a.white-button:hover {
+            color: #fff; }
+  section.tiles-contacts .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    section.tiles-contacts .contact img {
+      display: block;
+      max-width: 100%;
+      margin-bottom: 18px; }
+    section.tiles-contacts .contact .tile-content {
+      padding: 0 30px 0 40px; }
+      section.tiles-contacts .contact .tile-content h3 {
+        color: #f5855c;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 24px; }
+        section.tiles-contacts .contact .tile-content h3 span {
+          color: #2b2b2d; }
+      section.tiles-contacts .contact .tile-content .form-wrapper .form-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start; }
+        section.tiles-contacts .contact .tile-content .form-wrapper .form-group input.mail {
+          display: flex;
+          font-family: "Averta Light", sans-serif;
+          font-size: 16px;
+          line-height: 18px;
+          width: 100%;
+          text-indent: 20px;
+          border: 1px solid #cccccc;
+          border-radius: 6px;
+          padding: 10px 0 12px 0; }
+          section.tiles-contacts .contact .tile-content .form-wrapper .form-group input.mail::-webkit-input-placeholder {
+            text-indent: 20px;
+            font-family: "Averta Light", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 18px; }
+          section.tiles-contacts .contact .tile-content .form-wrapper .form-group input.mail::-moz-placeholder {
+            font-family: "Averta Light", sans-serif;
+            text-indent: 20px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 18px; }
+          section.tiles-contacts .contact .tile-content .form-wrapper .form-group input.mail:-moz-placeholder {
+            font-family: "Averta Light", sans-serif;
+            text-indent: 20px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 18px; }
+          section.tiles-contacts .contact .tile-content .form-wrapper .form-group input.mail:-ms-input-placeholder {
+            text-indent: 20px;
+            font-weight: 400;
+            font-family: "Averta Light", sans-serif;
+            font-size: 16px;
+            line-height: 18px; }
+        section.tiles-contacts .contact .tile-content .form-wrapper .form-group button.orange-button {
+          font-family: "Averta Regular", sans-serif;
+          width: 178px;
+          height: 50px;
+          font-size: 21px;
+          margin-left: 18px; }
+
+section.form-search .form-wrapper {
+  position: relative;
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid rgba(147, 149, 152, 0.3);
+  padding: 50px 93px 25px 90px;
+  box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.08); }
+  section.form-search .form-wrapper h3 {
+    font-family: "Averta Bold", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #2b2b2d;
+    margin-bottom: 5px; }
+  section.form-search .form-wrapper .form-group {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 18px; }
+    section.form-search .form-wrapper .form-group:before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: -35px;
+      background-image: url(../img/search-icon.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 27px;
+      width: 27px; }
+    section.form-search .form-wrapper .form-group input.search {
+      width: 100%;
+      max-width: 800px;
+      border: none;
+      padding: 10px 0;
+      border-bottom: 1px solid #009a8f;
+      font-family: "Averta Light", sans-serif;
+      font-size: 16px;
+      line-height: 18px; }
+      section.form-search .form-wrapper .form-group input.search:focus {
+        outline: none; }
+      section.form-search .form-wrapper .form-group input.search::-webkit-input-placeholder {
+        font-family: "Averta Light", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 18px; }
+      section.form-search .form-wrapper .form-group input.search::-moz-placeholder {
+        font-family: "Averta Light", sans-serif;
+        font-size: 16px;
+        line-height: 18px; }
+      section.form-search .form-wrapper .form-group input.search:-moz-placeholder {
+        font-family: "Averta Light", sans-serif;
+        font-size: 16px;
+        line-height: 18px; }
+      section.form-search .form-wrapper .form-group input.search:-ms-input-placeholder {
+        font-family: "Averta Light", sans-serif;
+        font-size: 16px;
+        line-height: 18px; }
+    section.form-search .form-wrapper .form-group button.button {
+      font-family: "Averta Light", sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      margin-left: 30px;
+      width: 135px;
+      height: 50px;
+      cursor: pointer; }
+  section.form-search .form-wrapper p.notice {
+    font-family: "Averta Light", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(43, 43, 45, 0.6); }
+
+section.tiles-see-more {
+  padding-bottom: 100px; }
+  section.tiles-see-more .heart-block {
+    position: relative; }
+    section.tiles-see-more .heart-block::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      background-image: url(../img/heartt-by-footer.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 64px;
+      height: 57px;
+      left: calc(50% - 32px); }
+  section.tiles-see-more .wrapper-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    section.tiles-see-more .wrapper-item .tile-item {
+      position: relative;
+      border-radius: 6px;
+      margin-bottom: 25px;
+      border: 1px solid rgba(147, 149, 152, 0.3); }
+      section.tiles-see-more .wrapper-item .tile-item:hover {
+        border: 1px solid #14998e; }
+      section.tiles-see-more .wrapper-item .tile-item .content-in {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        padding: 35px 0 30px 0;
+        z-index: 10;
+        height: 100%;
+        cursor: pointer; }
+        section.tiles-see-more .wrapper-item .tile-item .content-in span {
+          font-family: "Averta Light", sans-serif;
+          font-size: 16px;
+          line-height: 18px;
+          color: #009a8f;
+          margin-bottom: 10px; }
+        section.tiles-see-more .wrapper-item .tile-item .content-in h3 {
+          font-family: "Averta Bold", sans-serif;
+          text-align: center;
+          font-size: 24px;
+          line-height: 28px;
+          color: #2b2b2d;
+          margin-bottom: 15px;
+          transition: color .2s ease-out,background-color .2s ease-out,border .2s ease-out; }
+        section.tiles-see-more .wrapper-item .tile-item .content-in p {
+          text-align: center;
+          font-size: 16px;
+          line-height: 24px;
+          color: #2b2b2d;
+          margin-bottom: 20px; }
+        section.tiles-see-more .wrapper-item .tile-item .content-in .button {
+          font-family: "Averta Light", sans-serif;
+          font-size: 18px;
+          width: 178px;
+          height: 48px; }
+        section.tiles-see-more .wrapper-item .tile-item .content-in:hover h3 {
+          transition: color .2s ease-out,background-color .2s ease-out,border .2s ease-out;
+          color: #009a8f; }
+        section.tiles-see-more .wrapper-item .tile-item .content-in:hover .button {
+          background-color: #009a8f;
+          color: #fff; }
+
+section.get-started {
+  padding: 80px 0 80px 0;
+  background-color: #009a8f; }
+  section.get-started .wrapper-for-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff; }
+    section.get-started .wrapper-for-content h3 {
+      text-align: center;
+      font-family: "Averta Bold", sans-serif;
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 25px; }
+    section.get-started .wrapper-for-content a.button {
+      font-family: "Averta Regular", sans-serif;
+      font-size: 18px;
+      width: 200px;
+      height: 48px;
+      margin-bottom: 25px; }
+      section.get-started .wrapper-for-content a.button:hover {
+        border: 1px solid #fff;
+        background-color: transparent;
+        color: #fff; }
+    section.get-started .wrapper-for-content p {
+      font-family: "Averta Light", sans-serif;
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 5px; }
+    section.get-started .wrapper-for-content span {
+      font-family: "Averta Bold", sans-serif;
+      font-size: 16px;
+      line-height: 18px; }
+
+footer {
+  position: relative;
+  padding: 60px 0 80px 0; }
+  footer .nav-menu-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    footer .nav-menu-footer ul {
+      width: 155px;
+      display: flex;
+      flex-direction: column;
+      font-family: "Averta Bold", sans-serif;
+      font-size: 20px;
+      line-height: 24px;
+      color: #009a8f;
+      margin-bottom: 35px; }
+      footer .nav-menu-footer ul li {
+        margin-top: 5px;
+        line-height: initial; }
+        footer .nav-menu-footer ul li:first-child {
+          margin-top: 15px; }
+        footer .nav-menu-footer ul li a {
+          font-family: "Averta Light", sans-serif;
+          font-size: 16px;
+          color: #58595b;
+          transition: color .2s ease-out,background-color .2s ease-out,border .2s ease-out; }
+          footer .nav-menu-footer ul li a:hover {
+            color: rgba(88, 89, 91, 0.5);
+            transition: color .2s ease-out,background-color .2s ease-out,border .2s ease-out; }
+    footer .nav-menu-footer .wrapper-our-contacts {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      footer .nav-menu-footer .wrapper-our-contacts .our-contacts {
+        border-top: 1px solid #ccc;
+        padding-top: 28px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 30px;
+        max-width: 100%;
+        width: 280px; }
+        footer .nav-menu-footer .wrapper-our-contacts .our-contacts h5 {
+          font-family: "Averta Bold", sans-serif;
+          font-size: 20px;
+          line-height: 24px;
+          color: #2b2b2d;
+          margin-bottom: 10px; }
+        footer .nav-menu-footer .wrapper-our-contacts .our-contacts span {
+          color: #f5855d; }
+        footer .nav-menu-footer .wrapper-our-contacts .our-contacts .calls {
+          padding-bottom: 30px;
+          border-bottom: 1px solid #ccc; }
+          footer .nav-menu-footer .wrapper-our-contacts .our-contacts .calls span {
+            position: relative;
+            font-family: "Averta Light", sans-serif;
+            font-size: 20px;
+            line-height: 24px;
+            color: #2b2b2d; }
+            footer .nav-menu-footer .wrapper-our-contacts .our-contacts .calls span::before {
+              content: '';
+              position: absolute;
+              top: 6px;
+              left: -20px;
+              background-image: url(../img/phone.png);
+              background-repeat: no-repeat;
+              background-size: cover;
+              width: 15px;
+              height: 15px; }
+        footer .nav-menu-footer .wrapper-our-contacts .our-contacts .links {
+          padding: 30px 0 30px 0; }
+          footer .nav-menu-footer .wrapper-our-contacts .our-contacts .links a {
+            padding-right: 15px; }
+            footer .nav-menu-footer .wrapper-our-contacts .our-contacts .links a i {
+              font-size: 16px;
+              color: #009a8f;
+              transition: color .2s ease-out,background-color .2s ease-out,border .2s ease-out; }
+              footer .nav-menu-footer .wrapper-our-contacts .our-contacts .links a i:hover {
+                color: #2b2b2d;
+                transition: color .2s ease-out,background-color .2s ease-out,border .2s ease-out; }
+        footer .nav-menu-footer .wrapper-our-contacts .our-contacts p.info-text {
+          font-family: "Averta Light", sans-serif;
+          font-size: 14px;
+          line-height: 22px;
+          color: #58595b; }
+  footer .sub-menu {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between; }
+    footer .sub-menu p.copyrigth {
+      text-align: center;
+      padding-top: 15px;
+      font-family: "Averta Light", sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+      color: #58595b; }
+    footer .sub-menu ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      border-top: 1px solid #ccc;
+      padding-top: 20px; }
+      footer .sub-menu ul li {
+        display: block;
+        line-height: initial;
+        margin-bottom: 7px;
+        padding: 0 10px; }
+        footer .sub-menu ul li:first-child {
+          padding-left: 7px; }
+        footer .sub-menu ul li:last-child {
+          padding-right: 7px; }
+        footer .sub-menu ul li a {
+          font-family: "Averta Light", sans-serif;
+          font-weight: 300;
+          font-size: 12px;
+          line-height: 15px;
+          color: #58595b;
+          transition: color .2s ease-out,background-color .2s ease-out,border .2s ease-out; }
+          footer .sub-menu ul li a:hover {
+            color: #2b2b2d;
+            font-weight: 400;
+            transition: color .2s ease-out,background-color .2s ease-out,border .2s ease-out; }
+
+.hidden {
+  display: none; }
+
+.grid {
+  margin-top: 50px;
+  background-color: yellow;
+  height: 50px; }
+  .grid .cuob {
+    display: flex;
+    background-color: red;
+    height: 50px; }
